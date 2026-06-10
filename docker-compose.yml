@@ -1,0 +1,49 @@
+version: "3.8"
+
+# Cluster Hadoop HDFS — TP Big Data
+# Etudiant : Hashimi | Identifiant : c-21454
+
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    hostname: namenode
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    environment:
+      - CLUSTER_NAME=hashimi-c21454
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - ./data:/tp/data:ro
+
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode1
+    hostname: datanode1
+    ports:
+      - "9864:9864"
+    depends_on:
+      - namenode
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - ./data:/tp/data:ro
+
+  datanode2:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode2
+    hostname: datanode2
+    ports:
+      - "9865:9864"
+    depends_on:
+      - namenode
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - ./data:/tp/data:ro
+
+networks:
+  default:
+    name: hashimi-c21454-hadoop-net

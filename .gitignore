@@ -1,0 +1,15 @@
+# Ignore le gros fichier de données pour éviter de bloquer l'envoi sur GitHub (>100MB)
+data/*.csv
+data/*.json
+data/*.txt
+
+# Sauf si vous voulez ignorer tout le dossier data (décommentez la ligne suivante)
+# data/
+
+# Fichiers systèmes ou IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Fichiers de logs Hadoop s'il y en a
+*.log
