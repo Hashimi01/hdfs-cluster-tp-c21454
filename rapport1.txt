@@ -1,0 +1,5 @@
+=== Rapport partiel 1 — Hashimi (c-21454) ===
+Theme : Ingestion et replication HDFS
+Dataset : NYC Taxi Trip (nyctrip.csv, ~562 Mo)
+Chemin HDFS : /user/hashimi/c21454/datasets/
+Observation : facteur de replication initial 3, puis reduit a 2 avec setrep -w.

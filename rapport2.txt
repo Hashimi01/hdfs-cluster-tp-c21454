@@ -1,0 +1,5 @@
+=== Rapport partiel 2 — Hashimi (c-21454) ===
+Theme : Analyse FSCK et decoupage en blocs
+Fichier analyse : nyctrip.csv
+Resultat FSCK : HEALTHY — 5 blocs de 128 Mo repartis sur datanode1 et datanode2.
+Test de panne : arret de datanode1, lecture du fichier toujours possible.

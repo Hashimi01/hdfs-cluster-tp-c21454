@@ -1,0 +1,5 @@
+=== Rapport partiel 3 — Hashimi (c-21454) ===
+Theme : Operations avancees (getmerge, permissions, appendToFile)
+Repertoire rapports : /user/hashimi/c21454/rapports/
+Fusion getmerge realisee avec succes.
+Permissions personnes.txt : chmod 600 applique apres chown root:supergroup.
